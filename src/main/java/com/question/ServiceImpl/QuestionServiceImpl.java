@@ -26,7 +26,13 @@ public class QuestionServiceImpl implements QuestionService {
 
     @Override
     public Question addQuestion(Question question) {
-        System.out.print("Question:: "+question.getQuizId());
         return questionRepository.save(question);
     }
+
+    @Override
+    public List<Question> getQuizById(Integer quizId) {
+        return questionRepository.findByQuizId(quizId);
+    }
+
+
 }
