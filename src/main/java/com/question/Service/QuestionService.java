@@ -11,4 +11,7 @@ public interface QuestionService {
     Question getQuestionById(Integer questionId);
     Question addQuestion(Question question);
 
+//  For Question Client to implement feign
+    List<Question> getQuizById(Integer quizId);
+
 }

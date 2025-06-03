@@ -30,4 +30,10 @@ public class QuestionController {
         return this.questionService.addQuestion(question);
     }
 
+    //  For Question Client to implement Feign
+    @GetMapping("/quiz/{quizId}")
+    public List<Question> getByQuizId(@PathVariable Integer quizId){
+        return this.questionService.getQuizById(quizId);
+    }
+
 }
